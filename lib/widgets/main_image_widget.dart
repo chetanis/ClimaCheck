@@ -13,7 +13,7 @@ class MainImageWidget extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Container(
-          margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+          margin: const EdgeInsets.fromLTRB(0, 160, 0, 0),
           decoration: const BoxDecoration(
               image: DecorationImage(
             image: AssetImage('images/House.png'),
