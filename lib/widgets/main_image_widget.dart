@@ -8,7 +8,7 @@ class MainImageWidget extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('images/starrymountain.png'), fit: BoxFit.fill),
+            image: AssetImage('assets/images/starrymountain.png'), fit: BoxFit.fill),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -16,7 +16,7 @@ class MainImageWidget extends StatelessWidget {
           margin: const EdgeInsets.fromLTRB(0, 160, 0, 0),
           decoration: const BoxDecoration(
               image: DecorationImage(
-            image: AssetImage('images/House.png'),
+            image: AssetImage('assets/images/House.png'),
           )),
           child: Container()
         ),

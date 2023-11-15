@@ -33,7 +33,7 @@ class _TemperatureWidgetState extends State<TemperatureWidget> {
           ),
           const SizedBox(height: 10),
           const Image(
-            image: AssetImage('images/Moon_cloud_mid_rain.png'),
+            image: AssetImage('assets/images/Moon_cloud_mid_rain.png'),
             width: 50,
             height: 50,
           ),
