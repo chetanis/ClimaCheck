@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 3.4706,
+        "lat": 36.7589
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 20.88,
+        "feels_like": 20.64,
+        "temp_min": 20.88,
+        "temp_max": 20.88,
+        "pressure": 1023,
+        "humidity": 62,
+        "sea_level": 1023,
+        "grnd_level": 1018
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.38,
+        "deg": 317,
+        "gust": 1.58
+    },
+    "clouds": {
+        "all": 7
+    },
+    "dt": 1700238417,
+    "sys": {
+        "type": 1,
+        "id": 1060,
+        "country": "DZ",
+        "sunrise": 1700202353,
+        "sunset": 1700238982
+    },
+    "timezone": 3600,
+    "id": 2474141,
+    "name": "Boumerdes",
+    "cod": 200
+}
