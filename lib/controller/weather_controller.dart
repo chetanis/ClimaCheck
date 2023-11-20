@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:clima_check/model/currentWeather.dart';
+import 'package:clima_check/model/current_weather.dart';
 import 'package:dio/dio.dart';
 
 import '../constants.dart' as constants;
@@ -26,7 +26,7 @@ class WeatherController {
     }
   }
 
-  double getTemp() {
-    return currentWeather.mainWeather!.temp!;
-  }
+  // double getTemp() {
+  //   return currentWeather.mainWeather!.temp!;
+  // }
 }

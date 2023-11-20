@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:clima_check/model/clouds.dart';
 import 'package:clima_check/model/coord.dart';
-import 'package:clima_check/model/main_Wather.dart';
+import 'package:clima_check/model/main_weather.dart';
 import 'package:clima_check/model/sys.dart';
 import 'package:clima_check/model/weather.dart';
 import 'package:clima_check/model/wind.dart';
