@@ -1,28 +1,15 @@
-
 class Weather {
   int? id;
-  String? main,description,icon;
+  String? main;
+  String? description;
+  String? icon;
 
-  Weather({
-    this.id,
-    this.main,description,icon,
-  });
+  Weather({this.id, this.main, this.description, this.icon});
 
-  Map<String,dynamic> toJson(){
-    return{
-      "id": id,
-      "main" : main,
-      "description": description,
-      "icon":icon,
-    };
-  }
-
-  factory Weather.fromJson(Map<String,dynamic> map){
-    return Weather(
-      id: map["id"],
-      main: map["main"],
-      description: map["description"],
-      icon: map["icon"]
-    );
+  Weather.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    main = json['main'];
+    description = json['description'];
+    icon = json['icon'];
   }
 }

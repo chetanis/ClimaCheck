@@ -1,19 +1,10 @@
-
 class Clouds {
   int? all;
-  Clouds({
-    this.all,
-  });
 
-  Map<String,dynamic> toJson(){
-    return {
-      "all":all
-    };
+  Clouds({this.all});
+
+  Clouds.fromJson(Map<String, dynamic> json) {
+    all = json['all'];
   }
 
-  factory Clouds.fromJson(Map<String,dynamic> map){
-    return Clouds(
-      all: int.parse(map["all"])
-    );
-  }
 }

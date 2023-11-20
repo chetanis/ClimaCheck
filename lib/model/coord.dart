@@ -3,22 +3,12 @@ class Coord {
   double? lon;
   double? lat;
 
-  Coord({
-    this.lon,lat,
-  });
-  
-  Map<String, dynamic> toJson() {
-    return {
-      "lon":lon,
-      "lat":lat
-    };
+  Coord({this.lon, this.lat});
+
+  Coord.fromJson(Map<String, dynamic> json) {
+    lon = json['lon'];
+    lat = json['lat'];
   }
 
-  factory Coord.fromJson(Map<String, dynamic> map) {
-    return Coord(
-      lon: double.parse(map["lon"]),
-      lat: double.parse(map["lat"])
-    );
-  }
 
 }
