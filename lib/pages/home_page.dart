@@ -1,5 +1,7 @@
-import 'dart:ui';
 import 'package:blur/blur.dart';
+import 'package:clima_check/controller/weather_Controller.dart';
+import 'package:clima_check/model/current_weather.dart';
+import 'package:clima_check/widgets/loading_widget.dart';
 import 'package:clima_check/widgets/main_image_widget.dart';
 import 'package:clima_check/widgets/panel_widget.dart';
 import 'package:flutter/material.dart';
@@ -15,18 +17,39 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  WeatherController weatherController = WeatherController();
+  CurrentWeather? currentWeather;
+
+  @override
+  void initState() {
+    super.initState();
+    initializeWeather();
+  }
+
+  Future<void> initializeWeather() async{
+    currentWeather = await weatherController.initializeWeather();
+    setState(() {    
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final heightOfScreen = MediaQuery.of(context).size.height;
     final widthOfScreen = MediaQuery.of(context).size.width;
     const radiousPanel = BorderRadius.vertical(top: Radius.circular(35));
+
+    //loading page
+    if(currentWeather==null){
+      return const LoadingWidget();
+    }
+    
     return Scaffold(
       body: SlidingUpPanel(
         header: Container(
           decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-              color:  Color.fromARGB(109, 0, 0, 0),
-              ),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            color: Color.fromARGB(109, 0, 0, 0),
+          ),
           margin: EdgeInsets.fromLTRB(widthOfScreen / 2 - 25, 7, 0, 0),
           width: 50,
           height: 5,
